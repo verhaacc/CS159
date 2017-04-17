@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,7 +25,7 @@ public class GUIDemo extends JFrame
         setTitle("Bigger/Smaller");
         setSize(200, 100);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+
         panel = new JPanel();
         biggerButton = new JButton("BIGGER");
         smallerButton = new JButton("SMALLER");
@@ -34,6 +35,7 @@ public class GUIDemo extends JFrame
         add(panel);
         panel.add(biggerButton);
         panel.add(smallerButton);
+        panel.setBackground(Color.blue);
 
         setVisible(true);
     }
@@ -56,7 +58,7 @@ public class GUIDemo extends JFrame
             {
                 setSize(size.width + 10, size.height + 10);
             }
-            else
+            else if (panel.getWidth() > 200 && panel.getHeight() > 100)
             {
                 setSize(size.width - 10, size.height - 10);
             }
