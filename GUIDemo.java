@@ -24,6 +24,7 @@ public class GUIDemo extends JFrame
         setTitle("Bigger/Smaller");
         setSize(200, 100);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
         panel = new JPanel();
         biggerButton = new JButton("BIGGER");
         smallerButton = new JButton("SMALLER");
